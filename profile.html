@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nikhil Polugari — Resume</title>
+  <style>
+    :root{
+      --accent: #2563eb;
+      --bg: #f4f6f8;
+      --panel: #0f1724;
+      --muted: #64748b;
+      --card: #ffffff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter, "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:#0b1220;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    .resume {
+      max-width:1100px;
+      margin:40px auto;
+      display:flex;
+      background:var(--card);
+      border-radius:10px;
+      overflow:hidden;
+      box-shadow:0 8px 30px rgba(12,20,30,0.12);
+    }
+
+    /* SIDEBAR */
+    .sidebar{
+      width:320px;
+      padding:34px 28px;
+      background:linear-gradient(180deg,#0f1724 0%, #0b1220 100%);
+      color:#e6eef8;
+      display:flex;
+      flex-direction:column;
+      gap:20px;
+      align-items:flex-start;
+    }
+
+    .photo-wrap{
+      width:120px;
+      height:120px;
+      border-radius:999px;
+      overflow:hidden;
+      border:4px solid rgba(255,255,255,0.12);
+      box-shadow:0 6px 18px rgba(2,6,23,0.45);
+      margin-bottom:4px;
+    }
+
+    .photo-wrap img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .sidebar h1{
+      margin:0;
+      font-size:20px;
+      letter-spacing:0.2px;
+      color:#eaf2ff;
+    }
+
+    .sidebar .role{
+      color:var(--accent);
+      font-weight:600;
+      font-size:13px;
+      margin-top:4px;
+    }
+
+    .contact, .certs {
+      width:100%;
+      font-size:14px;
+      color:var(--muted);
+      line-height:1.5;
+    }
+
+    .contact a{
+      color:#cfe4ff;
+      text-decoration:none;
+      word-break:break-all;
+    }
+
+    .section-title{
+      font-weight:700;
+      font-size:12px;
+      color:#9ec0ff;
+      margin-top:8px;
+      text-transform:uppercase;
+      letter-spacing:0.8px;
+    }
+
+    .certs ul{ margin:8px 0 0 16px; padding:0; color:#cfdff6 }
+    .certs li{ margin-bottom:6px; font-size:13px; }
+
+    /* MAIN CONTENT */
+    .main{
+      flex:1;
+      padding:34px 40px;
+      color:#081225;
+    }
+
+    .header {
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:20px;
+      margin-bottom:12px;
+    }
+
+    .main h2{
+      margin:0 0 6px 0;
+      font-size:26px;
+      color:#071029;
+    }
+    .sub{
+      color:var(--accent);
+      font-weight:600;
+      font-size:14px;
+      margin-bottom:14px;
+    }
+
+    .section{
+      margin-bottom:20px;
+    }
+
+    .section h3{
+      margin:0 0 10px 0;
+      font-size:16px;
+      color:var(--accent);
+      border-bottom:2px solid #edf2ff;
+      padding-bottom:6px;
+    }
+
+    p, ul { margin:0; font-size:15px; color:#203042; line-height:1.6; }
+    ul{ margin-top:8px; margin-left:20px }
+    li{ margin-bottom:8px }
+
+    .skill-line{ margin-top:8px; display:flex; flex-wrap:wrap; gap:8px }
+    .pill{
+      background:#eef6ff;
+      color:var(--accent);
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:13px;
+      display:inline-block;
+    }
+
+    /* responsive */
+    @media (max-width:800px){
+      .resume { margin:18px; flex-direction:column; }
+      .sidebar { width:100%; flex-direction:row; align-items:center; gap:16px; padding:18px; }
+      .photo-wrap{ width:84px; height:84px; }
+      .main{ padding:20px; }
+      .sidebar .certs{ display:none; } /* keep sidebar compact on small screens */
+    }
+  </style>
+</head>
+<body>
+  <div class="resume">
+    <!-- SIDEBAR (photo included) -->
+    <aside class="sidebar" aria-label="Contact and certifications">
+      <div style="display:flex; gap:16px; align-items:center; width:100%;">
+        <div class="photo-wrap" aria-hidden="false">
+          <img src="C:\Users\User\Desktop\Thomas Picture.png" alt="Profile photo of Nikhil Polugari">
+        </div>
+        <div style="flex:1">
+          <h1>Nikhil Polugari</h1>
+          <div class="role">Computer Engineering Graduate</div>
+        </div>
+      </div>
+
+      <div class="contact">
+        <div class="section-title">Contact</div>
+        <p><strong>Phone:</strong> 331-300-4289</p>
+        <p><strong>Email:</strong> <a href="mailto:thomaspolugari@gmail.com">thomaspolugari@gmail.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/thomas-polugari-6822b01b8/">linkedin.com/in/thomas-polugari</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/Nikhil-Thomas-Polugari">github.com/Nikhil-Thomas-Polugari</a></p>
+      </div>
+
+      <div class="certs" style="width:100%;">
+        <div class="section-title">Certifications</div>
+        <ul>
+          <li>Azure Fundamentals</li>
+          <li>Azure AI Fundamentals</li>
+          <li>SnowPro Core (Snowflake)</li>
+          <li>Google IT Automation with Python</li>
+          <li>Power BI Data Analyst</li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+      <div class="header">
+        <div>
+          <h2>Nikhil Polugari</h2>
+          <div class="sub">Backend & Cloud Data Engineer · Java • Python • SQL</div>
+        </div>
+      </div>
+
+      <section class="section">
+        <h3>Professional Summary</h3>
+        <p>Detail-oriented and analytical Computer Engineering graduate with hands-on experience in backend development, cloud data workflows, and data analysis. Certified in Azure and Snowflake, with strong foundations in Java, Python, SQL, and C++.</p>
+      </section>
+
+      <section class="section">
+        <h3>Education</h3>
+        <p><strong>B.S. in Computer Engineering</strong><br>University of Illinois at Chicago — May 2024<br>Capstone: Robotic Line Tracking Car with hardware logic integration</p>
+      </section>
+
+      <section class="section">
+        <h3>Work Experience</h3>
+
+        <p><strong>Revature — Software Developer (Pre-Employment Program)</strong><br><em>Feb 2025 – Apr 2025</em></p>
+        <ul>
+          <li>Developed REST APIs using Java, Spring Boot, and Javalin.</li>
+          <li>Built scalable Java applications integrated with SQL databases; used Git, JUnit, and Mockito.</li>
+        </ul>
+
+        <p style="margin-top:12px"><strong>Cloud Data Engineering Projects</strong><br><em>Feb 2025 – Present</em></p>
+        <ul>
+          <li>Developed ETL/ELT pipelines in Azure Data Factory and Synapse Analytics.</li>
+          <li>Performed data profiling with SQL and Python; optimized pipelines using Azure Data Lake.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h3>Skills</h3>
+        <div class="skill-line">
+          <span class="pill">Java</span>
+          <span class="pill">Python</span>
+          <span class="pill">C++</span>
+          <span class="pill">SQL</span>
+          <span class="pill">Spring Boot</span>
+          <span class="pill">Azure Data Factory</span>
+          <span class="pill">Snowflake</span>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3>Projects</h3>
+        <p><strong>Spring Social Media Blog API</strong> — Built RESTful API using Spring Boot with authentication and CRUD operations.</p>
+        <p style="margin-top:8px"><strong>Robotic Line Tracking Car</strong> — Led sensor-driven hardware integration using C++ for real-time I/O.</p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
